@@ -5,6 +5,9 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate_header:
     runs-on: ubuntu-latest
@@ -18,5 +21,5 @@ jobs:
           git config user.name  "actions-user"
           git config user.email "action@github.com"
           git add .
-          git commit -m "auto generate list"
+          git commit -m "auto generate header files"
           git push
