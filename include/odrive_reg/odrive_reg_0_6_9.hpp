@@ -10,8 +10,7 @@
 namespace odrive_reg {
     constexpr std::string_view fw_version = "0.6.9";
     constexpr std::string_view hw_version = "4.4.58";
-
- } // namespace odrive_reg
+} // namespace odrive_reg
 
 namespace odrive_reg::endpoints {
 
@@ -614,6 +613,6 @@ namespace odrive_reg::endpoints {
     using get_raw_32 = OdriveReg<678, OdriveRegType::Function, false, false>;
     using get_raw_256 = OdriveReg<681, OdriveRegType::Function, false, false>;
 
- } // namespace odrive_reg
+} // namespace odrive_reg::endpoints
 
 #endif // ODRIVE_REG_0_6_9_HPP
