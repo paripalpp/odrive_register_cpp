@@ -1,0 +1,22 @@
+name: Generate Header
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  generate_header:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate Header
+        run: |
+          python3 generate_header.py
+          git config user.name  "actions-user"
+          git config user.email "action@github.com"
+          git add .
+          git commit -m "auto generate list"
+          git push
