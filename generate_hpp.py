@@ -103,7 +103,7 @@ if __name__ == "__main__":
     
     # Get the JSON file from listed URLs
     urls = config
-    output_dir = "include"
+    output_dir = "include/odrive_reg"
     for url in urls:
         print(f"Fetching {url}...")
         response = requests.get(url)
